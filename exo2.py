@@ -54,7 +54,7 @@ def menu():
     print("3 quiter")
 
 def resoudre_systeme():
-    N = int(input("Entrez la taille de la matrice carrée A : "))
+    N = int(input("Entrez la taille de la matrice carre A : "))
     A = [[0] * N for _ in range(N)]
     b = [0] * N
 
@@ -66,25 +66,25 @@ def resoudre_systeme():
 
     while True:
         menu()
-        choix = input("Choisissez une méthode : ")
+        choix = input("Choisissez une methode : ")
 
         if choix == "1":
-            max_iter = int(input("Nombre maximum d'itérations : "))
+            max_iter = int(input("Nombre maximum d'iterations : "))
             x = jacobi(A, b, N, max_iter)
-            print("Solution approchée (x) avec Jacobi :")
+            print("Solution approchee (x) avec Jacobi :")
             afficher_vecteur(x, N, 'x')
 
         elif choix == "2":
-            max_iter = int(input("Nombre maximum d'itérations : "))
+            max_iter = int(input("Nombre maximum d'iterations : "))
             x = gauss_seidel(A, b, N, max_iter)
-            print("Solution approchée (x) avec Gauss-Seidel :")
+            print("Solution approchee (x) avec Gauss-Seidel :")
             afficher_vecteur(x, N, 'x')
 
         elif choix == "3":
             print("Au revoir !")
             break
         else:
-            print("Choix invalide. Veuillez réessayer.")
+            print("Choix invalide. Veuillez ressayer.")
 
 
 resoudre_systeme()
